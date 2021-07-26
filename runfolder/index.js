@@ -15,8 +15,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
     //Questions (Add GitHub Profile User Name in Here for link to profile in Readme),(EMAIL Is in here, request email)
 
 // TODO: Create an array of questions for user input
-const questions = () => {
-    return inquirer.prompt([
+const questions = [
         {
             type: 'input',
             name: 'projectTitle',
@@ -71,7 +70,7 @@ const questions = () => {
         },
         {
             type: 'checkbox',
-            name: 'license',
+            name: 'licenseType',
             message: 'Please select License Type (Required)',
             choices: ['Unlicense', 'MIT', 'Mozilla', 'GNU_AGP', 'GNU_GPL', 'Apache']
         },
@@ -101,8 +100,7 @@ const questions = () => {
                 }
             }
         }
-    ]);
-};
+    ]
 
 //License 
     //Unlicense https://spdx.org/licenses/Unlicense.html
@@ -114,20 +112,40 @@ const questions = () => {
 
 
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//TODO: Create a function to write README file
+const writeToFile = (fileName, data) => {
+    fs.writeFileSync(fileName, data, (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log("README.md File Created")
+    });
+};
 
 // TODO: Create a function to initialize app
 
 function init() {
+    inquirer.prompt(questions)
+    .then(response => {
+        writeToFile('README.md', generateMarkdown(response))   
+   
+    // .then(answers)
+    // .then(function (data){
+    //     fs.writeFile(filename, generateMarkdown(data), (err) => {
+    //         if (err) {
+    //         console.log(err);
+    //         }
+    //     }
+    //)});
 
-    fs.writeFile("./Test.txt", 'Testing 2!', function (err) {
-        if (err) return console.log(err);
-        console.log('Hello World > helloworld.txt');
-      });
-  
+    // fs.writeFile("./Test.txt", 'Testing 2!', function (err) {
+    //     if (err) return console.log(err);
+    //     console.log('Hello World > helloworld.txt');
+    //   })
+    //   .then(writeToFile(fileName, data))  
+    })
 };
 
 
 // Function call to initialize app
-init();
+init()
