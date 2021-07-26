@@ -1,2 +1,5 @@
+./runfolder/node_modules/
+./runfolder/.DS_Store
+.runfolder/Test.txt
 node_modules/
-.DS_Store/
+.DS_Store
