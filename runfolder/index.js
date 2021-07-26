@@ -45,12 +45,12 @@ const questions = [
         {
             type: 'input',
             name: 'instalation',
-            message: 'Please enter a step-by-step description of how to get the development environment running (Required)',
+            message: 'Please enter a step-by-step description of how to Install (Required)',
             validate: instalationInput => {
                 if (instalationInput) {
                     return true;
                 } else {
-                    console.log('Please enter a step-by-step description of how to get the development environment running!');
+                    console.log('Please enter a step-by-step description of how to install!');
                     return false;
                 }
             }
@@ -70,9 +70,10 @@ const questions = [
         },
         {
             type: 'checkbox',
-            name: 'licenseType',
+            name: 'badgetype',
             message: 'Please select License Type (Required)',
-            choices: ['Unlicense', 'MIT', 'Mozilla', 'GNU_AGP', 'GNU_GPL', 'Apache']
+            choices: ['Unlicense', 'MIT', 'Mozilla', 'GNU_AGP', 'GNU_GPL', 'Apache'],
+            default:['Unlicense','MIT','Mozilla','GNU_AGP','GNU_GPL','Apache']
         },
         {
             type: 'input',
@@ -99,7 +100,34 @@ const questions = [
                     return false;
                 }
             }
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Please provide your GitHub user name (Required)',
+            validate: testInput => {
+            if (testInput) {
+                    return true;
+                } else {
+                    console.log('Please provide your GitHub user name!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please provide your email address (Required)',
+            validate: testInput => {
+            if (testInput) {
+                    return true;
+                } else {
+                    console.log('Please provide your email address!');
+                    return false;
+                }
+            }
         }
+
     ]
 
 //License 
