@@ -13,19 +13,19 @@
   https://img.shields.io/badge/license-Unlicense,MIT,Mozilla,GNU_AGP,GNU_GPL,Apache-orange
 
   ## Desctiption
-  Test Descript
+  Test Project Descriptions
 
   ## Instalation
-  1 2 3 4
+  1) Step on 2) Step two 3) Step three 4) Step four
 
   ## Contributing
-  NA
+  No Contributing Guidelines 
 
   ## Tests
   NA
 
   ## Questions
   Contact via email at ehajek@outlook.com
-  GitHub User: https://github.com/Ehajek
+  GitHub User: https://github.com/ehajek
  
   
