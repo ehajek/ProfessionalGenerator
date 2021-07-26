@@ -70,8 +70,7 @@ function generateMarkdown(data) {
    6. [Questions](#Questions)
 
   ## Licensing 
-  ${data.badgetype}
-  https://img.shields.io/badge/license-${data.badgetype}-orange
+  ![${data.badgetype}](https://img.shields.io/badge/license-${data.badgetype}-orange
 
   ## Desctiption
   ${data.description}
