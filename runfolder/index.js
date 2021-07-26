@@ -72,8 +72,7 @@ const questions = [
             type: 'checkbox',
             name: 'badgetype',
             message: 'Please select License Type (Required)',
-            choices: ['Unlicense', 'MIT', 'Mozilla', 'GNU_AGP', 'GNU_GPL', 'Apache'],
-            default:['Unlicense','MIT','Mozilla','GNU_AGP','GNU_GPL','Apache']
+            choices: ['Unlicense', 'MIT', 'Mozilla', 'GNU_AGP', 'GNU_GPL', 'Apache']
         },
         {
             type: 'input',
